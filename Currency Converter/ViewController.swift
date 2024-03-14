@@ -19,9 +19,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet var pickerView: UIPickerView!
     
+    @IBOutlet var doneButton: UIButton!
     
     // properties
-    
+
     var currencyCode: [String] = []
     var values: [Double] = []
     var activeCurrency: Double = 0.0
@@ -35,10 +36,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         fetchJSON()
         
+        if textField.isEnabled == false {
+            textField.isEnabled = true
+        }
+        
         textField.addTarget(self, action: #selector(updateViews), for: .editingChanged)
+        
+        doneButton.addTarget(self, action: #selector(doneAction), for: .allEvents)
+        
+    }
+    
+    @objc func doneAction() {
+        textField.isEnabled = false
+        viewDidLoad()
     }
     
     @objc func updateViews(input: Double) {
+//        textField.isEnabled = true
         guard let amountText = textField.text, let theAmountText = Double(amountText) else { return }
         if textField.text != "" {
             let total = theAmountText * activeCurrency
