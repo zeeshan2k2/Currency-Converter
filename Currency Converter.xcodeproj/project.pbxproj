@@ -13,6 +13,7 @@
 		C175C15D2BA37D7900D61002 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C175C15C2BA37D7900D61002 /* Base */; };
 		C175C15F2BA37D7B00D61002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C175C15E2BA37D7B00D61002 /* Assets.xcassets */; };
 		C175C1622BA37D7B00D61002 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C175C1612BA37D7B00D61002 /* Base */; };
+		C175C16A2BA3814300D61002 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C175C1692BA3814300D61002 /* ExchangeRates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C175C15E2BA37D7B00D61002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C175C1612BA37D7B00D61002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C175C1632BA37D7B00D61002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C175C1692BA3814300D61002 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				C175C1572BA37D7900D61002 /* SceneDelegate.swift */,
 				C175C1592BA37D7900D61002 /* ViewController.swift */,
 				C175C15B2BA37D7900D61002 /* Main.storyboard */,
+				C175C1692BA3814300D61002 /* ExchangeRates.swift */,
 				C175C15E2BA37D7B00D61002 /* Assets.xcassets */,
 				C175C1602BA37D7B00D61002 /* LaunchScreen.storyboard */,
 				C175C1632BA37D7B00D61002 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C175C16A2BA3814300D61002 /* ExchangeRates.swift in Sources */,
 				C175C15A2BA37D7900D61002 /* ViewController.swift in Sources */,
 				C175C1562BA37D7900D61002 /* AppDelegate.swift in Sources */,
 				C175C1582BA37D7900D61002 /* SceneDelegate.swift in Sources */,
