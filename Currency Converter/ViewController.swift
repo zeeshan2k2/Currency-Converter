@@ -26,6 +26,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var currencyCode: [String] = []
     var values: [Double] = []
     var activeCurrency: Double = 0.0
+    var currencyCodeRowNumber: Int = 0
     
     
     override func viewDidLoad() {
@@ -52,11 +53,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @objc func updateViews(input: Double) {
-//        textField.isEnabled = true
         guard let amountText = textField.text, let theAmountText = Double(amountText) else { return }
         if textField.text != "" {
-            let total = theAmountText * activeCurrency
-            priceLabel.text = String(format: "%.2f", total)
+            var total = theAmountText * activeCurrency
+            var totalStr = String(format: "%.2f", total)
+            
+            priceLabel.text = totalStr + " " + currencyCode[currencyCodeRowNumber]
+            
         }
     }
     
@@ -69,10 +72,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return currencyCode[row]
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currencyCodeRowNumber = row
         activeCurrency = values[row]
         updateViews(input: activeCurrency)
     }
